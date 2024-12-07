@@ -1,0 +1,218 @@
+:root {
+    --primary-color: #1D3557;  /* Dark Blue */
+    --accent-color: #E63946;    /* Red */
+    --body-background: #A8DADC; /* Light Teal */
+    --button-hover : #8f0712; /* button hover */
+}
+
+body{
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "navbar"
+    "main"
+    "footer";
+    padding: 0px;
+    margin: 0px;
+}
+
+.hading {
+    color: var( --primary-color );
+    text-shadow:1px 2px 4px var(--accent-color);
+}
+
+.hading:hover{
+    text-shadow:2.5px 3.5px 6px var(--accent-color);
+
+}
+
+.navbar{
+    top: 0;
+    position: sticky;
+    grid-area: navbar;
+    z-index: 100;
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.nav-div{
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+}
+
+.manu-link{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.manu-link a{
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 8px;
+    background-color: var(--accent-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.manu-link a:hover {
+    background-color: var(--button-hover );
+}
+button{
+    background-color: var(--button-hover );
+}
+
+.main{
+    grid-area: main;
+}
+
+.banner-section{
+   background-color: var(--body-background); 
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   height: 600px;
+}
+
+h1 {
+    font-size: 4rem;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+
+
+.banner-section div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0px 20px;
+    
+}
+
+.banner-section img{
+    width: 100%;
+    height: auto; 
+    max-width: 100%;
+
+}
+.banner-section button{
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 8px;
+    background-color: var(--accent-color);
+}
+
+
+.domain-serch{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 100px;
+    background-color: var(--body-background); 
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.price div {
+    width: 100px;
+    height: 100px;
+}
+
+.serch input{
+    width: 300px;
+    height: 30px;
+    border: 1.5 solid black;
+}
+
+.serch button{
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 8px;
+    background-color: var(--accent-color);
+}
+button:hover {
+    background-color: var(--button-hover );
+}
+
+.hosting-plane {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto, 1fr;
+    grid-template-areas: 
+        "first second third";  
+    margin: 50px 0px;
+}
+.hosting-plane .text{
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.basic, .pro, .premium{
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.hosting-plane img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.basic {
+    grid-area: first;
+    grid-row: 2;   
+}
+
+.pro {
+    grid-area: second; 
+    grid-row: 2; 
+}
+
+.premium {
+    grid-area: third;   
+    grid-row: 2; 
+}
+
+
+h3.hading{
+    font-size: 2rem;
+}
+
+footer{
+    grid-area: footer;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
