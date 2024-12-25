@@ -17,6 +17,7 @@ body{
     "footer";
     padding: 0px;
     margin: 0px;
+    overflow-x: hidden;
 }
 
 .hading {
@@ -140,11 +141,13 @@ h1 {
     height: 100px;
 }
 
-.serch input{
+
+.serch input {
     width: 300px;
     height: 30px;
-    border: 1.5 solid black;
+    border: 1.5px solid black; /* Fixed */
 }
+
 
 .serch button{
     font-size: 1rem;
@@ -163,7 +166,7 @@ button:hover {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto, 1fr;
     grid-template-areas: 
-        "first second third";  
+    "basic pro premium"; ;  
     margin: 50px 0px;
 }
 .hosting-plane .text{
@@ -189,17 +192,21 @@ button:hover {
 }
 
 .basic {
-    grid-area: first;
+    grid-area: basic;
     grid-row: 2;   
 }
+.basic div h4 {
+    margin-bottom: 0px; /* Adjust this value for spacing between <h4> elements */
+}
+
 
 .pro {
-    grid-area: second; 
+    grid-area: pro; 
     grid-row: 2; 
 }
 
 .premium {
-    grid-area: third;   
+    grid-area: premium;   
     grid-row: 2; 
 }
 
@@ -208,6 +215,31 @@ h3.hading{
     font-size: 2rem;
 }
 
+.div-rs{
+    line-height: 1;
+    text-align: center;
+}
+
+.first-rs {
+    font-size: 18px; 
+    color: var(--accent-color);
+    font-weight: 300;
+}
+
+.second-rs {
+    font-size: 40px; 
+    color: var(--primary-color);
+    font-weight: bold;
+    text-shadow:1px 2px 4px var(--accent-color);
+}
+
+.third-rs {
+    font-size: 16px; 
+    color: var(--accent-color);
+    font-weight: 300;
+}
+
+
 footer{
     grid-area: footer;
     padding: 15px;
@@ -215,4 +247,5 @@ footer{
     width: 100%;
     background-color: var(--primary-color);
 }
+
 
